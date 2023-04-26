@@ -15,10 +15,4 @@ jobs:
           java-version: '8'
       - name: Build and Test
         run: mvn test
-      - name: Create Test Status Badge
-        if: always()
-        uses: badgen/badgen-action@v1
-        with:
-          subject: test
-          status: ${{ job.status }}
-          color: ${{ job.status == 'success' && 'green' || 'red' }}
+ 
