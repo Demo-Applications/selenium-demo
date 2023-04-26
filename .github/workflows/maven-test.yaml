@@ -1,0 +1,24 @@
+name: Selenium Demo Project
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8'
+      - name: Build and Test
+        run: mvn test
+      - name: Create Test Status Badge
+        if: always()
+        uses: badgen/badgen-action@v1
+        with:
+          subject: test
+          status: ${{ job.status }}
+          color: ${{ job.status == 'success' && 'green' || 'red' }}
