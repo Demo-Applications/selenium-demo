@@ -24,7 +24,8 @@ public class WebDriverFactory {
 			chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
 			chromeOptions.addArguments("--disable-extensions"); // disabling extensions
 			chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-			chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model return chromeOptions;
+			chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model return chromeOptions
+			return chromeOptions;
 		case FIREFOX:
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
 			return firefoxOptions;
