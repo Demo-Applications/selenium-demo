@@ -2,6 +2,8 @@
 
 #### Demo project showcasing selenium automation  
 
+![build status](https://github.com/Demo-Applications/selenium-demogithub/docs/actions/workflows/maven-test.yaml/badge.svg)
+
 This project demonstrates Automation testing of [Swag Labs](https://www.saucedemo.com/) UI with Selenium
 
 ___
@@ -21,3 +23,4 @@ ___
 ## Examples
 
 ![](assets/Execution Result.png)
+
