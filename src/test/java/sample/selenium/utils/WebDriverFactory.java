@@ -5,7 +5,7 @@ import io.github.bonigarcia.wdm.config.DriverManagerType;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeOptions;	
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 
@@ -21,8 +21,10 @@ public class WebDriverFactory {
 		switch (driverManagerType) {
 		case CHROME:
 			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.addArguments("--no-sandbox");
-			return chromeOptions;
+			chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
+			chromeOptions.addArguments("--disable-extensions"); // disabling extensions
+			chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+			chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model return chromeOptions;
 		case FIREFOX:
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
 			return firefoxOptions;
