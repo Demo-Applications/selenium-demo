@@ -25,6 +25,7 @@ public class WebDriverFactory {
 			chromeOptions.addArguments("--disable-extensions"); // disabling extensions
 			chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 			chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model return chromeOptions
+			chromeOptions.addArguments("--headless");
 			return chromeOptions;
 		case FIREFOX:
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
