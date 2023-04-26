@@ -1,0 +1,5 @@
+id,email,"	pass"
+1,standard_user,"	secret_sauce"
+2,locked_out_user,"	secret_sauce"
+3,problem_user,"	secret_sauce"
+4,performance_glitch_user,"	secret_sauce"

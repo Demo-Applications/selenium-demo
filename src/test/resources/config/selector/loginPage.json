@@ -1,0 +1,19 @@
+  {
+	"url": "https://www.saucedemo.com/",
+	"usernameField": {
+		"type": "id",
+		"value": "user-name"
+	},
+	"passwordField": {
+		"type": "id",
+		"value": "password"
+	},
+	"loginButton": {
+		"type": "name",
+		"value": "login-button"
+	},
+	"errorMessageContainer": {
+		"type": "className",
+		"value": "error-message-container"
+	}
+} 	
