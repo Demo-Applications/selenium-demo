@@ -1,0 +1,23 @@
+name: Selenium Demo Project
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    strategy:
+      matrix:
+        java: [ '8' ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Java ${{ matrix.Java }} Setup
+        uses: actions/setup-java@v3
+        with:
+          java-version: ${{ matrix.java }}
+          distribution: 'temurin'
+      - name: Compile and build
+        run: mvn test-compile 
+      - name: Run Tests
+        run: mvn test 
