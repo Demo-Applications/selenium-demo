@@ -22,5 +22,5 @@ ___
 
 ## Examples
 
-![](assets/Execution Result.png)
+![](/assets/Execution%20Result.png)
 
